@@ -10,5 +10,4 @@ class SignUp(generic.CreateView):
 
 
 def helloWorld(request):
-
     return HttpResponse('Hello World')

@@ -44,8 +44,8 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=300)),
                 ('plot', models.CharField(max_length=1000)),
                 ('date', models.DateField(default=datetime.datetime(2020, 7, 31, 8, 33, 1, 766136))),
-                ('actors', models.ManyToManyField(to='filmapp.Actors')),
-                ('directors', models.ManyToManyField(to='filmapp.Directors')),
+                ('actors', models.ManyToManyField(to='moviesapp.Actors')),
+                ('directors', models.ManyToManyField(to='moviesapp.Directors')),
             ],
         ),
         migrations.CreateModel(
@@ -53,7 +53,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('stars', models.SmallIntegerField(choices=[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5)])),
-                ('movie', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='filmapp.Movies')),
+                ('movie', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='moviesapp.Movies')),
             ],
             options={
                 'abstract': False,
@@ -64,7 +64,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('stars', models.SmallIntegerField(choices=[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5)])),
-                ('director', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='filmapp.Directors')),
+                ('director', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='moviesapp.Directors')),
             ],
             options={
                 'abstract': False,
@@ -75,7 +75,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('stars', models.SmallIntegerField(choices=[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5)])),
-                ('actor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='filmapp.Actors')),
+                ('actor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='moviesapp.Actors')),
             ],
             options={
                 'abstract': False,
