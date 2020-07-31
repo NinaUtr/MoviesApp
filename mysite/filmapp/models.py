@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime
+from django.utils.timezone import now
 
 # Create your models here.
 class Person(models.Model):
@@ -21,7 +21,7 @@ class Directors(Person):
 class Movies(models.Model):
     title = models.CharField(max_length=300)
     plot = models.CharField(max_length=1000)
-    date = models.DateField(default=datetime.now())
+    date = models.DateField(default=now())
     actors = models.ManyToManyField(Actors)
     directors = models.ManyToManyField(Directors)
 
@@ -31,7 +31,27 @@ class Movies(models.Model):
     def __str__(self):
         return self.title+' ('+str(self.year_from_date())+') '
 
-class Ratings(models.Model):
-    actor = models.OneToOneField(Actors, on_delete=models.CASCADE)
-    stars = models.SmallIntegerField()
+class StarRatings(models.Model):
+    stars_choices = [(i,i) for i in range(0,6)]
+    stars = models.SmallIntegerField(choices=stars_choices)
 
+    class Meta:
+        abstract = True
+
+class RatingsActors(StarRatings):
+    actor = models.ForeignKey(Actors, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.actor.name+' '+self.actor.surname+' ('+str(self.stars)+') '
+
+class RatingsDirectors(StarRatings):
+    director = models.ForeignKey(Directors, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.director.name+' '+self.director.surname+' ('+str(self.stars)+') '
+
+class RatingsMovies(StarRatings):
+    movie = models.ForeignKey(Movies, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.movie.title+' ('+str(self.stars)+') '
