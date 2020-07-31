@@ -3,4 +3,5 @@ from django.shortcuts import render
 
 
 def helloWorld(request):
-    return render(request, 'filmapp/main_page.html')
+
+    return HttpResponse('Hello World')

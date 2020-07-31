@@ -18,10 +18,13 @@ from django.urls import include,path
 from django.conf import settings
 from django.conf.urls import url
 from django.views.static import serve
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('moviesapp/', include('filmapp.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', TemplateView.as_view(template_name='home.html'), name='home')
 ]
 
 if settings.DEBUG:
