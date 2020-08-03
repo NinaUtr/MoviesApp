@@ -1,13 +1,13 @@
 <ul>
     <hr/>
     {% for object in object_list %}
-        <h2>{{ object }}</h2>
-        <p>{{ object.description }}</p>
-        <a href="{% url 'detail_director' object.pk %}">See more</a>
-        <a href="{% url 'update_director' object.pk %}">Edit</a>
-        <a href="{% url 'delete_director' object.pk %}">Delete</a>
-        <hr/>
-    {% empty %} 
-        <h2>No objects yet.</h2>
-    {% endfor %} 
+    <h2>{{ object }}</h2>
+    <p>{{ object.description }}</p>
+    <a href="{% url 'detail_director' object.pk %}">See more</a>
+    <a href="{% url 'update_director' object.pk %}">Edit</a>
+    <a href="{% url 'delete_director' object.pk %}">Delete</a>
+    <hr/>
+    {% empty %}
+    <h2>No objects yet.</h2>
+    {% endfor %}
 </ul>

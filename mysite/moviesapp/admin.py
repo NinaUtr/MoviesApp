@@ -8,4 +8,3 @@ admin.site.register(Movies)
 admin.site.register(RatingsActors)
 admin.site.register(RatingsDirectors)
 admin.site.register(RatingsMovies)
-
