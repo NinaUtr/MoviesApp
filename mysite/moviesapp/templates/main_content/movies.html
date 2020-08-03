@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Movies{% endblock %}
+
+{% block content %}
+
+{% if movies|length == 0 %}
+  <p>There're no movies</p>
+{% else %}
+    {% for movie in movies %}
+        <p>{{ movie }}</p>
+    {% endfor %}
+
+
+{% endif %}
+{% endblock %}
