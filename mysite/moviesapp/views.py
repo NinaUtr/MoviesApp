@@ -2,7 +2,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 from .models import Actors, Directors, Movies
-from django.shortcuts import render
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -63,11 +62,27 @@ class DirectorDelete(DeleteView):
     template_name = 'directors/delete_director.html'
     success_url = reverse_lazy('directors')
 
+class MovieList(ListView):
+    model = Movies
+    template_name = 'movies/list_movie.html'
 
+class MovieDetailView(DetailView):
+    model = Movies
+    template_name = 'movies/detail_movie.html'
 
-def all_movies(request):
-    try:
-        movies = Movies.objects.all()
-        return render(request, 'main_content/list_movie.html', {'movies': movies})
-    except AttributeError:
-        return render(request, 'main_content/list_movie.html', {'movies': []})
+class MovieCreate(CreateView):
+    model = Movies
+    fields = ['title', 'plot', 'date', 'actors', 'directors', 'poster']
+    template_name = 'movies/new_movie.html'
+    success_url = reverse_lazy('movies')
+
+class MovieUpdate(UpdateView):
+    model = Movies
+    fields = ['title', 'plot', 'date', 'actors', 'directors', 'poster']
+    template_name = 'movies/update_movie.html'
+    success_url = reverse_lazy('movies')
+
+class MovieDelete(DeleteView):
+    model = Movies
+    template_name = 'movies/delete_movie.html'
+    success_url = reverse_lazy('movies')

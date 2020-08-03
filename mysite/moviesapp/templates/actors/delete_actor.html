@@ -3,5 +3,5 @@
     {% csrf_token %}
     <p>Are you sure you want to delete "{{ object }}"?</p> 
     <input type="submit" value="Confirm">
-    <a href="{% url 'actors' %}">Back</a>
+    <input type="button" value="Go back!" onclick="history.back()">
 </form>
