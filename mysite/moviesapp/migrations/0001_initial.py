@@ -75,7 +75,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('stars', models.SmallIntegerField(choices=[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4), (5, 5)])),
-                ('actor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='moviesapp.Actors')),
+                ('actors', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='moviesapp.Actors')),
             ],
             options={
                 'abstract': False,
