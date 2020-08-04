@@ -85,32 +85,3 @@ class Movies(models.Model):
 
     def __str__(self):
         return f"{self.title} ({str(self.year_from_date())})"
-
-
-class StarRatings(models.Model):
-    stars_choices = [(i, i) for i in range(0, 6)]
-    stars = models.SmallIntegerField(choices=stars_choices)
-
-    class Meta:
-        abstract = True
-
-
-class RatingsActors(StarRatings):
-    actor = models.ForeignKey(Actors, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f"{self.actor.name} {self.actor.surname} ({str(self.stars)})"
-
-
-class RatingsDirectors(StarRatings):
-    director = models.ForeignKey(Directors, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f"{self.director.name} {self.director.surname} ({str(self.stars)})"
-
-
-class RatingsMovies(StarRatings):
-    movie = models.ForeignKey(Movies, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f"{self.movie.title} ({str(self.stars)})"
