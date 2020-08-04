@@ -1,15 +1,14 @@
-from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
-from django.views import generic
-from .models import Actors, Directors, Movies
+from .models import Actors, Directors, Movies, User
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 
 
-class SignUp(generic.CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy('login')
+class SignUp(CreateView):
+    model = User
+    fields = ['email', 'password']
+    success_url = reverse_lazy('home')
     template_name = 'signup.html'
 
 
