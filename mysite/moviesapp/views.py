@@ -5,11 +5,11 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 
 
-class SignUp(CreateView):
+class Register(CreateView):
     model = User
     fields = ['email', 'password']
     success_url = reverse_lazy('home')
-    template_name = 'signup.html'
+    template_name = 'registration/register.html'
 
 
 class ActorList(ListView):
