@@ -53,9 +53,9 @@ class User(AbstractUser):
 class Person(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=200)
-    description = models.TextField(max_length=1000, null=True)
+    description = models.TextField(max_length=1000, null=True, blank=True)
     birthday = models.DateField(default=now())
-    photo = models.URLField(max_length=200, null=True)
+    photo = models.URLField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return f"{self.name} {self.surname}"
@@ -73,11 +73,11 @@ class Directors(Person):
 
 
 class Movies(models.Model):
-    title = models.CharField(max_length=300)
+    title = models.CharField(max_length=300, unique=True)
     plot = models.TextField(max_length=1000, null=True)
     date = models.DateField(default=now())
-    actors = models.ManyToManyField(Actors)
-    directors = models.ManyToManyField(Directors)
+    actors = models.ManyToManyField(Actors, blank=True, null=True)
+    directors = models.ManyToManyField(Directors, blank=True, null=True)
     poster = models.URLField(max_length=200, null=True)
 
     def year_from_date(self):
@@ -85,3 +85,6 @@ class Movies(models.Model):
 
     def __str__(self):
         return f"{self.title} ({str(self.year_from_date())})"
+
+    def get_actors(self):
+        return self.actors.__str__()

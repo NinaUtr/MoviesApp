@@ -11,11 +11,44 @@ class Register(CreateView):
     success_url = reverse_lazy('home')
     template_name = 'registration/register.html'
 
+class List(ListView):
+    def __init__(self, model, template_name):
+        self.model=model
+        self.template_name=template_name
+
+class Detail(DetailView):
+    def __init__(self, model, template_name):
+        self.model=model
+        self.template_name=template_name
+
+class Create(CreateView):
+    def __init__(self, model, template_name, success_url, fields = '__all__' ):
+        self.model=model
+        self.template_name=template_name
+        self.success_url=success_url
+        self.fields=fields
+
+class Update(UpdateView):
+    def __init__(self, model, template_name, success_url, fields = '__all__' ):
+        self.model=model
+        self.template_name=template_name
+        self.success_url=success_url
+        self.fields=fields
+
+class Delete(DeleteView):
+    def __init__(self, model, template_name, success_url):
+        self.model=model
+        self.template_name=template_name
+        self.success_url=success_url
+
 
 class ActorList(ListView):
     model = Actors
     template_name = 'actors/list_actor.html'
 
+class ActorManage(ListView):
+    model = Actors
+    template_name = 'actors/manage_actor.html'
 
 class ActorDetailView(DetailView):
     model = Actors
@@ -46,6 +79,9 @@ class DirectorList(ListView):
     model = Directors
     template_name = 'directors/list_director.html'
 
+class DirectorManage(ListView):
+    model = Directors
+    template_name = 'directors/manage_director.html'
 
 class DirectorDetailView(DetailView):
     model = Directors
@@ -75,6 +111,10 @@ class DirectorDelete(DeleteView):
 class MovieList(ListView):
     model = Movies
     template_name = 'movies/list_movie.html'
+
+class MovieManage(ListView):
+    model = Movies
+    template_name = 'movies/manage_movie.html'
 
 
 class MovieDetailView(DetailView):

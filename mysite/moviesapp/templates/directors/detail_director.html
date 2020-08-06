@@ -1,4 +1,44 @@
-<img src={{ object.photo }}>
-<h1>{{ object }}</h1>
-<p>{{ object.description }}</p>
-<input type="button" value="Go back!" onclick="history.back()">
+{% extends 'base.html' %}
+{% load static %}
+{% load ratings %}
+{% block content %}
+
+<!-- Page Heading -->
+<a href="{% url 'actors' %}" class="btn btn-secondary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-arrow-right"></i>
+                    </span>
+    <span class="text">Go back</span>
+</a>
+<div class="card shadow mb-4">
+    <div class="col-6">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <img src={{ object.photo }} width="150">
+            </div>
+        </div>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">{{ object }}</h6>
+            </div>
+            <div class="card-body">
+                <p>Date of birth: {{ object.birthday }}</p>
+                <p>Movies directed:</p>
+                {% for movie in object.movies_set.all %}
+                <a href="{% url 'detail_movie' movie.pk %}">{{movie}}</a>
+                {%endfor%}
+            </div>
+        </div>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Ratings</h6>
+            </div>
+            <div class="card-body">
+                <p>{% ratings object %}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
