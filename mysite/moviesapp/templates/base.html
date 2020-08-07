@@ -51,9 +51,11 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Actors actions:</h6>
                     <a class="collapse-item" href="{% url 'actors' %}">List actors</a>
+                    {% if request.user.is_superuser %}
                     <h6 class="collapse-header">Manager actions:</h6>
                     <a class="collapse-item" href="{% url 'new_actor' %}">Add new actor</a>
                     <a class="collapse-item" href="{% url 'manage_actor' %}">Manage actors</a>
+                    {% endif %}
                 </div>
             </div>
         </li>
@@ -71,9 +73,11 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Directors actions:</h6>
                     <a class="collapse-item" href="{% url 'directors' %}">List directors</a>
+                    {% if request.user.is_superuser %}
                     <h6 class="collapse-header">Manager actions:</h6>
                     <a class="collapse-item" href="{% url 'new_director' %}">Add new director</a>
                     <a class="collapse-item" href="{% url 'manage_director' %}">Manage directors</a>
+                    {% endif %}
                 </div>
             </div>
         </li>
@@ -89,9 +93,11 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Movies actions:</h6>
                     <a class="collapse-item" href="{% url 'movies' %}">List movies</a>
+                    {% if request.user.is_superuser %}
                     <h6 class="collapse-header">Manager actions:</h6>
                     <a class="collapse-item" href="{% url 'new_movie' %}">Add new movie</a>
                     <a class="collapse-item" href="{% url 'manage_movie' %}">Manage movies</a>
+                    {% endif %}
                 </div>
             </div>
         </li>
@@ -124,17 +130,7 @@
 
 
                 <!-- Topbar Search -->
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                               aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                <p>Hello: </p>
 
                 <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -142,15 +138,21 @@
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
+                        {% if request.user.email %}
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user.email}}</span>
+                        {% else %}
+                        <a class="small" href="{% url 'login' %}">Login</a>
+                        <a class="small" href="{% url 'register' %}">Register</a>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Anonymous guest</span>
+                        {% endif %}
                         <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                          aria-labelledby="userDropdown">
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'login' %}" data-toggle="modal" data-target="#logoutModal">
+                        <a class="dropdown-item" href="{% url 'logout' %}" data-toggle="modal"
+                           data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
                         </a>
@@ -209,7 +211,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="{% url 'movies' %}">Logout</a>
+                <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
             </div>
         </div>
     </div>
