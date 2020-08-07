@@ -7,3 +7,5 @@ class Register(CreateView):
     fields = ['email', 'password']
     success_url = reverse_lazy('home')
     template_name = 'registration/register.html'
+
+
