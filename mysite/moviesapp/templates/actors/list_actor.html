@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load ratings %}
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
 <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+<style>.star-ratings-rating-average, .star-ratings-rating-count, .star-ratings-rating-user {display: none;}</style>
+
 <ul>
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">List of actors</h1>
@@ -14,6 +16,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">{{ object }}</h6>
+            <p>{% ratings object %}</p>
         </div>
         <div class="card-body">
             <img src={{ object.photo }} width="150">
