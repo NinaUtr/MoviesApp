@@ -2,6 +2,8 @@
 {% load static %}
 {% load ratings %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
 
 <a href="{% url 'movies' %}" class="btn btn-secondary btn-icon-split">
                     <span class="icon text-white-50">
