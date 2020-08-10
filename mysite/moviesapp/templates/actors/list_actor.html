@@ -13,19 +13,28 @@
 
     <hr/>
     {% for object in object_list %}
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">{{ object }}</h6>
-            <p>{% ratings object %}</p>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <img src={{ object.photo }} style = 'width: 200px'>
         </div>
-        <div class="card-body">
-            <img src={{ object.photo }} width="150">
-            <p>{{ object.description }}</p>
-            <a href="{% url 'detail_actor' object.pk %}">See more</a>
+        <div class="col-sm-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h4 class="m-0 font-weight-bold text-primary">{% ratings object %} {{ object }}</h4>
+
+                </div>
+                <div class="card-body">
+                    <p>{{ object.description }}</p>
+                    <a href="{% url 'detail_actor' object.pk %}">See more</a>
+                </div>
+            </div>
         </div>
     </div>
+    <br>
     {% empty %}
     <h2>No objects yet.</h2>
     {% endfor %}
 </ul>
 {% endblock %}
+

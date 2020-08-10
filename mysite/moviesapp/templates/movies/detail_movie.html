@@ -5,53 +5,53 @@
 <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
 <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
 
+
 <a href="{% url 'movies' %}" class="btn btn-secondary btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-arrow-right"></i>
                     </span>
     <span class="text">Go back</span>
 </a>
-<div class="card shadow mb-4">
-    <div class="col-6">
-        <div class="card shadow mb-4">
-            <div class="card-body">
-                <img src={{ object.poster }} width="150">
-            </div>
-        </div>
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">{{ object }}</h6>
-            </div>
-            <div class="card-body">
-                <p>Plot: {{ object.plot }}</p>
-            </div>
-        </div>
 
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Ratings</h6>
+<div class="card shadow mb-4" style="width: 40rem; margin:15px 0px">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card shadow mb-4" style="width: 38rem; margin: 15px">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">{{ object }}</h6>
+                </div>
+                <div class="card-body">
+                    <img src={{ object.poster }} style="width: 10rem; margin: 0px 15px 0px 0px; float:left">
+                    <p>Plot: {{ object.plot}}</p>
+
+                </div>
             </div>
-            <div class="card-body">
-                <p>{% ratings object %}</p>
+            <div class="card shadow mb-4" style="width: 38rem; margin: 15px">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Ratings</h6>
+                </div>
+                <div class="card-body">
+                    <p>{% ratings object %}</p>
+                </div>
+            </div>
+
+            <div class="card shadow mb-4" style="width: 38rem; margin: 15px">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Cast</h6>
+                </div>
+                <div class="card-body">
+                    <p>Directors:</p>
+                    {% for director in object.directors.all %}
+                    <a href="{% url 'detail_director' director.pk %}">{{director}}</a>
+                    {%endfor%}
+                    <p>Actors:</p>
+                    {% for actor in object.actors.all %}
+                    <a href="{% url 'detail_actor' actor.pk %}">{{actor}}</a>
+                    {%endfor%}
+                </div>
             </div>
         </div>
-
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Cast:</h6>
-            </div>
-            <div class="card-body">
-                <p>Directors:</p>
-                {% for director in object.directors.all %}
-                <a href="{% url 'detail_director' director.pk %}">{{director}}</a>
-                {%endfor%}
-                <p>Actors:</p>
-                {% for actor in object.actors.all %}
-                <a href="{% url 'detail_actor' actor.pk %}">{{actor}}</a>
-                {%endfor%}
-            </div>
-        </div>
-
     </div>
 </div>
-{% endblock %}
+
+{%endblock%}

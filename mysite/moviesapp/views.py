@@ -65,7 +65,7 @@ class DirectorDetailView(DetailView):
 class DirectorManage(PermissionRequiredMixin, ListView):
     model = Directors
     permission_required = 'moviesapp.change'
-    template_name = 'directors/list_director.html'
+    template_name = 'directors/manage_director.html'
 
 
 class DirectorCreate(PermissionRequiredMixin, CreateView):
@@ -104,7 +104,7 @@ class MovieDetailView(DetailView):
 class MovieManage(PermissionRequiredMixin, ListView):
     model = Movies
     permission_required = 'moviesapp.change'
-    template_name = 'movies/list_movie.html'
+    template_name = 'movies/manage_movie.html'
 
 
 class MovieCreate(PermissionRequiredMixin, CreateView):
