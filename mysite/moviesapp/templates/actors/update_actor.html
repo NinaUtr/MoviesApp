@@ -24,10 +24,9 @@
                           maxlength="1000">{{object.description}}</textarea>
             </div>
             <div class="form-group">
-                <input type="date" value="{{object.birthday}}" class="form-control form-control-user" name="birthday"
+                <input type="date" value={{view.formatted_birthday}} class="form-control form-control-user" name="birthday"
                        required="">
             </div>
-            <p>{{object.birthday}}</p>
             <div class="form-group">
                 <input type="url" value="{{object.photo}}" class="form-control form-control-user" name="photo"
                        maxlength="200" required="">

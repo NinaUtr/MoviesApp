@@ -124,9 +124,21 @@
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                 <!-- Sidebar Toggle (Topbar) -->
-                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                    <i class="fa fa-bars"></i>
-                </button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+
+                        </div>
+                        <div class="col-sm">
+                            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
 
                 <!-- Topbar - Nav Item - User Information -->
@@ -138,20 +150,30 @@
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{request.user.email}}</span>
                         <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                         {% else %}
-                        <a class="small" href="{% url 'login' %}">Login</a>
-                        <a class="small" href="{% url 'register' %}">Register</a>
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">Anonymous guest</span>
+                        <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                         {% endif %}
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                          aria-labelledby="userDropdown">
                         <div class="dropdown-divider"></div>
+                        {% if request.user.email %}
                         <a class="dropdown-item" href="{% url 'logout' %}" data-toggle="modal"
                            data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
                         </a>
+                        {% else %}
+                        <a class="dropdown-item" href="{% url 'login' %}">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Login
+                        </a>
+                        <a class="dropdown-item" href="{% url 'register' %}">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Register
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
 

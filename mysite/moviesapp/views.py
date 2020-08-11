@@ -42,14 +42,23 @@ class ActorUpdate(PermissionRequiredMixin, UpdateView):
     permission_required = 'moviesapp.change'
     fields = '__all__'
     template_name = 'actors/update_actor.html'
-    success_url = reverse_lazy('actors')
+    success_url = reverse_lazy('manage_actor')
+
+    def formatted_birthday(self):
+        month = self.object.birthday.month
+        day = self.object.birthday.day
+        if self.object.birthday.month < 10:
+            month = f"0{self.object.birthday.month}"
+        if self.object.birthday.day < 10:
+            day = f"0{self.object.birthday.day}"
+        return f"{self.object.birthday.year}-{month}-{day}"
 
 
 class ActorDelete(PermissionRequiredMixin, DeleteView):
     model = Actors
     permission_required = 'moviesapp.change'
     template_name = 'actors/delete_actor.html'
-    success_url = reverse_lazy('actors')
+    success_url = reverse_lazy('manage_actor')
 
 
 class DirectorList(ListView):
@@ -81,14 +90,23 @@ class DirectorUpdate(PermissionRequiredMixin, UpdateView):
     fields = '__all__'
     permission_required = 'moviesapp.change'
     template_name = 'directors/update_director.html'
-    success_url = reverse_lazy('directors')
+    success_url = reverse_lazy('manage_director')
+
+    def formatted_birthday(self):
+        month = self.object.birthday.month
+        day = self.object.birthday.day
+        if self.object.birthday.month < 10:
+            month = f"0{self.object.birthday.month}"
+        if self.object.birthday.day < 10:
+            day = f"0{self.object.birthday.day}"
+        return f"{self.object.birthday.year}-{month}-{day}"
 
 
 class DirectorDelete(PermissionRequiredMixin, DeleteView):
     model = Directors
     permission_required = 'moviesapp.change'
     template_name = 'directors/delete_director.html'
-    success_url = reverse_lazy('directors')
+    success_url = reverse_lazy('manage_director')
 
 
 class MovieList(ListView):
@@ -114,17 +132,38 @@ class MovieCreate(PermissionRequiredMixin, CreateView):
     template_name = 'movies/new_movie.html'
     success_url = reverse_lazy('movies')
 
+    def actors(self):
+        return Actors.objects.all()
+
+    def directors(self):
+        return Directors.objects.all()
+
 
 class MovieUpdate(PermissionRequiredMixin, UpdateView):
     model = Movies
     permission_required = 'moviesapp.change'
     fields = '__all__'
     template_name = 'movies/update_movie.html'
-    success_url = reverse_lazy('movies')
+    success_url = reverse_lazy('manage_movie')
+
+    def actors(self):
+        return Actors.objects.all()
+
+    def directors(self):
+        return Directors.objects.all()
+
+    def formatted_date(self):
+        month = self.object.date.month
+        day = self.object.date.day
+        if self.object.date.month < 10:
+            month = f"0{self.object.date.month}"
+        if self.object.date.day < 10:
+            day = f"0{self.object.date.day}"
+        return f"{self.object.date.year}-{month}-{day}"
 
 
 class MovieDelete(PermissionRequiredMixin, DeleteView):
     model = Movies
     permission_required = 'moviesapp.change'
     template_name = 'movies/delete_movie.html'
-    success_url = reverse_lazy('movies')
+    success_url = reverse_lazy('manage_movie')

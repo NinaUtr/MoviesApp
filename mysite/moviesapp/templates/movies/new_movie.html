@@ -16,7 +16,7 @@
                        placeholder="Title">
             </div>
             <div class="form-group">
-                <textarea type="text" cols="40" rows="10" class="form-control form-control-user" name="plot"
+                <textarea cols="40" rows="10" class="form-control form-control-user" name="plot"
                           maxlength="1000"
                           placeholder="Plot"></textarea>
             </div>
@@ -25,12 +25,20 @@
                        required="">
             </div>
             <div class="form-group">
-                <select name="actors" multiple=""></select>
+                <select class="form-control form-control-user" name="actors" multiple>
+                    {% for actor in view.actors%}
+                    <option value={{actor.pk}}>{{actor}}</option>
+                    {% endfor %}
+                </select>
             </div>
-            <p>{{Actor.objects.all()}}</p>
             <div class="form-group">
-                <select name="directors" multiple=""></select>
+                <select class="form-control form-control-user" name="directors" multiple>
+                    {% for director in view.directors%}
+                    <option value={{director.pk}}>{{director}}</option>
+                    {% endfor %}
+                </select>
             </div>
+
             <div class="form-group">
                 <input type="url" class="form-control form-control-user" name="poster" maxlength="200" required=""
                        placeholder="Url to poster">
