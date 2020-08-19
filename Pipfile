@@ -9,6 +9,7 @@ verify_ssl = true
 requests = "*"
 django = "*"
 psycopg2-binary = "*"
+django-star-ratings = "*"
 
 [requires]
 python_version = "3.8"
