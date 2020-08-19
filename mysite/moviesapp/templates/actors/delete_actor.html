@@ -1,6 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<hr/>
 <form method="post">
     {% csrf_token %}
-    <p>Are you sure you want to delete "{{ object }}"?</p>
-    <input type="submit" value="Confirm">
-    <input type="button" value="Go back!" onclick="history.back()">
+    <div class="card shadow mb-4" style="width: 40rem">
+        <div class="card-header py-3">
+            <h4 class="m-0 font-weight-bold text-primary">Are you sure you want to delete "{{ object }}"?</h4>
+            <br>
+            <button type="submit" value="Confirm" class="btn btn-success btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                <span class="text">Confirm</span>
+            </button>
+            <a href="{% url 'manage_actor' %}" class="btn btn-secondary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-arrow-right"></i>
+                    </span>
+                <span class="text">Go back</span>
+            </a>
+        </div>
+    </div>
 </form>
+
+{% endblock %}

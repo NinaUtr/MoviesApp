@@ -1,6 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<hr/>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save">
-    <input type="button" value="Go back!" onclick="history.back()">
-</form>  
+    <div class="card shadow mb-4" style="width: 40rem">
+        <div class="card-header py-3">
+            <h4 class="m-0 font-weight-bold text-primary">Edit actor</h4>
+        </div>
+        <div class="card-body">
+
+            <div class="form-group">
+                <input type="text" value="{{object.name}}" class="form-control form-control-user" name="name"
+                       maxlength="100" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" value="{{object.surname}}" class="form-control form-control-user" name="surname"
+                       maxlength="200" required="">
+            </div>
+            <div class="form-group">
+                <textarea type="text" cols="40" rows="10" class="form-control form-control-user" name="description"
+                          maxlength="1000">{{object.description}}</textarea>
+            </div>
+            <div class="form-group">
+                <input type="date" value={{view.formatted_birthday}} class="form-control form-control-user" name="birthday"
+                       required="">
+            </div>
+            <div class="form-group">
+                <input type="url" value="{{object.photo}}" class="form-control form-control-user" name="photo"
+                       maxlength="200" required="">
+            </div>
+
+            <button type="submit" value="Submit" class="btn btn-success btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-check"></i>
+                    </span>
+                <span class="text">Save</span>
+            </button>
+
+            <a href="{% url 'manage_actor' %}" class="btn btn-secondary btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-arrow-right"></i>
+                    </span>
+                <span class="text">Go back</span>
+            </a>
+        </div>
+    </div>
+
+</form>
+{% endblock %}
