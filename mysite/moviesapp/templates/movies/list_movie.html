@@ -1,13 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load ratings %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+<style>.star-ratings-rating-average, .star-ratings-rating-count, .star-ratings-rating-user {display: none;}</style>
+
 <ul>
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">List of movies</h1>
+
     <hr/>
     {% for object in object_list %}
-    <h2>{{ object }}</h2>
-    <p>{{ object.description }}</p>
-    <a href="{% url 'detail_movie' object.pk %}">See more</a>
-    <a href="{% url 'update_movie' object.pk %}">Edit</a>
-    <a href="{% url 'delete_movie' object.pk %}">Delete</a>
-    <hr/>
+
+    <div class="row">
+        <div class="col-sm-2">
+            <img src={{ object.poster }} style='width: 200px'>
+        </div>
+        <div class="col-sm-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h4 class="m-0 font-weight-bold text-primary">{% ratings object %} {{ object }}</h4>
+
+                </div>
+                <div class="card-body">
+                    <p>{{ object.plot }}</p>
+                    <a href="{% url 'detail_movie' object.pk %}">See more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
     {% empty %}
     <h2>No objects yet.</h2>
     {% endfor %}
 </ul>
+{% endblock %}
