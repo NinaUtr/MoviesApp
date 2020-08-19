@@ -23,7 +23,7 @@ SECRET_KEY = 'xk3%0p7**jbm5c@3p(h#ypy55z@$cxx8l1(&z14z(uq)-s_8&2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'localhost']
 
 # Application definition
 
@@ -79,8 +79,8 @@ DATABASES = {
         'NAME': 'moviesdb',
         'USER': 'nina',
         'PASSWORD': 'nina',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
