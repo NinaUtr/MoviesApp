@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'moviesdb',
         'USER': 'nina',
         'PASSWORD': 'nina',
-        'HOST': 'pb',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
