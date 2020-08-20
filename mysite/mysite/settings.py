@@ -28,6 +28,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'moviesapp',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'star_ratings'
 ]
 
-AUTH_USER_MODEL = 'moviesapp.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
