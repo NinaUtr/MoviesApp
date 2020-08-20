@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'star_ratings'
 ]
 
-AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTHENTICATION_BACKENDS = ['accounts.backends.EmailBackend']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,7 +81,7 @@ DATABASES = {
         'NAME': 'moviesdb',
         'USER': 'nina',
         'PASSWORD': 'nina',
-        'HOST': 'db',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
