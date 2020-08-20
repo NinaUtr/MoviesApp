@@ -4,9 +4,9 @@ services:
   db:
     image: postgres
     environment:
-      - POSTGRES_DB=movies
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=moviesdb
+      - POSTGRES_USER=nina
+      - POSTGRES_PASSWORD=nina
 
   web:
     build: .
