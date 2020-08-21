@@ -1,16 +1,9 @@
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from .models import Actors, Directors, Movies, User
+from .models import Actors, Directors, Movies
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-
-
-class Register(CreateView):
-    model = User
-    fields = ['email', 'password']
-    success_url = reverse_lazy('login')
-    template_name = 'registration/register.html'
 
 
 class ActorList(ListView):

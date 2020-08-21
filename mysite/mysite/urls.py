@@ -18,8 +18,9 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', include('moviesapp.urls')),
+    path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
     path('ratings/', include('star_ratings.urls', namespace='ratings')),
 ]
 
