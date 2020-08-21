@@ -54,7 +54,7 @@ class Person(models.Model):
     name = models.CharField(max_length=100)
     surname = models.CharField(max_length=200)
     description = models.TextField(max_length=1000, null=True, blank=True)
-    birthday = models.DateField(default=now())
+    birthday = models.DateField(default="2000-01-01")
     photo = models.URLField(max_length=200, null=True, blank=True)
 
     def __str__(self):
@@ -75,9 +75,9 @@ class Directors(Person):
 class Movies(models.Model):
     title = models.CharField(max_length=300, unique=True)
     plot = models.TextField(max_length=1000, null=True)
-    date = models.DateField(default=now())
-    actors = models.ManyToManyField(Actors, blank=True, null=True)
-    directors = models.ManyToManyField(Directors, blank=True, null=True)
+    date = models.DateField(default="2000-01-01")
+    actors = models.ManyToManyField(Actors, blank=True)
+    directors = models.ManyToManyField(Directors, blank=True)
     poster = models.URLField(max_length=200, null=True)
 
     def year_from_date(self):

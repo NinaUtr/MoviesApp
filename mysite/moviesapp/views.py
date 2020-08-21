@@ -9,7 +9,7 @@ from django.views.generic.detail import DetailView
 class Register(CreateView):
     model = User
     fields = ['email', 'password']
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('login')
     template_name = 'registration/register.html'
 
 

@@ -25,18 +25,43 @@
                        required="">
             </div>
             <div class="form-group">
+                <hr>
+                <p style="padding-left:15px;">Select actors</p>
+                {% if not view.actors|length %}
+                <a href="{% url 'new_actor' %}" class="btn btn-light btn-icon-split">
+                    <span class="icon text-gray-600">
+                      <i class="fas fa-arrow-right"></i>
+                    </span>
+                    <span class="text">No actors yet! Add one</span>
+                </a>
+                <hr>
+                {% else %}
                 <select class="form-control form-control-user" name="actors" multiple>
                     {% for actor in view.actors%}
                     <option value={{actor.pk}}>{{actor}}</option>
                     {% endfor %}
                 </select>
+                {% endif %}
+
             </div>
             <div class="form-group">
+                <hr>
+                <p style="padding-left:15px;">Select directors</p>
+                {% if not view.directors|length %}
+                <a href="{% url 'new_director' %}" class="btn btn-light btn-icon-split">
+                    <span class="icon text-gray-600">
+                      <i class="fas fa-arrow-right"></i>
+                    </span>
+                    <span class="text">No director yet! Add one</span>
+                </a>
+                <hr>
+                {% else %}
                 <select class="form-control form-control-user" name="directors" multiple>
                     {% for director in view.directors%}
                     <option value={{director.pk}}>{{director}}</option>
                     {% endfor %}
                 </select>
+                {% endif %}
             </div>
 
             <div class="form-group">
