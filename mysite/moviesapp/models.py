@@ -11,6 +11,9 @@ class Person(models.Model):
     def __str__(self):
         return f"{self.name} {self.surname}"
 
+    def short_description(self):
+        return f"{self.description[:100]}"
+
     class Meta:
         abstract = True
 
@@ -39,3 +42,6 @@ class Movies(models.Model):
 
     def get_actors(self):
         return self.actors.__str__()
+
+    def short_plot(self):
+        return f"{self.plot[:100]}"
