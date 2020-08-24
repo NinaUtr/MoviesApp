@@ -11,9 +11,11 @@ services:
   web:
     build: .
     command: >
-      sh -c "python manage.py migrate &&
-             python manage.py loaddata fixtures/data.json &&
-             python manage.py runserver 0.0.0.0:8000"
+      sh -c "
+      /var/wait-for-it.sh db:5432 &&
+      python manage.py migrate &&
+      python manage.py loaddata fixtures/data.json &&
+      python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
