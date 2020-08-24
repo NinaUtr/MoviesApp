@@ -1,0 +1,102 @@
+[
+  {
+    "model": "moviesapp.actors",
+    "pk": 1,
+    "fields": {
+      "name": "John",
+      "surname": "Travolta",
+      "description": "John Joseph Travolta (born February 18, 1954)[1][2] is an American actor, singer, dancer, and pilot. Travolta rose to fame during the 1970s, appearing on the television series Welcome Back, Kotter (1975–1979) and starring in the box office successes Saturday Night Fever (1977) and Grease (1978). His acting career declined through the 1980s, but enjoyed a resurgence in the 1990s with his role in Pulp Fiction (1994), and he has since starred in films such as Get Shorty (1995), Broken Arrow (1996), Face/Off (1997), Swordfish (2001), The Punisher (2004), Bolt (2008), and The Taking of Pelham 123 (2009).",
+      "birthday": "1954-01-18",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTUwNjQ0ODkxN15BMl5BanBnXkFtZTcwMDc5NjQwNw@@._V1_UY317_CR11,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.actors",
+    "pk": 2,
+    "fields": {
+      "name": "Uma",
+      "surname": "Thurman",
+      "description": "Uma Karuna Thurman (born April 29, 1970)[1] is an American actress and model. She has performed in a variety of films, from romantic comedies and dramas to science fiction and action films. Following her appearances on the December 1985 and May 1986 covers of British Vogue, Thurman starred in Dangerous Liaisons (1988). She rose to international prominence with her performance as Mia Wallace in Quentin Tarantino's 1994 film Pulp Fiction,[2] for which she was nominated for the Academy Award, the BAFTA Award, and the Golden Globe Award for Best Supporting Actress. Often hailed as Tarantino's muse,[3] she reunited with the director to play the main role in Kill Bill: Volume 1 and 2 (2003, 2004),[4] which brought her two additional Golden Globe Award nominations.[5]",
+      "birthday": "1970-04-29",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMjMxNzk1MTQyMl5BMl5BanBnXkFtZTgwMDIzMDEyMTE@._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.actors",
+    "pk": 3,
+    "fields": {
+      "name": "Samuel L.",
+      "surname": "Jackson",
+      "description": "Samuel Leroy Jackson (born December 21, 1948) is an American actor and producer. Widely regarded as one of the most popular actors of his generation, the films in which he has appeared have collectively grossed over $27 billion worldwide, making him the highest-grossing actor of all time (when cameo appearances are excluded).[1][2][3] He rose to fame with films such as Goodfellas (1990), Jungle Fever (1991), Patriot Games (1992), Amos & Andrew (1993), True Romance (1993), and Jurassic Park (1993), and has especially been noted for his roles in the Quentin Tarantino films Pulp Fiction (1994), Jackie Brown (1997), Django Unchained (2012), and The Hateful Eight (2015). For his role in Pulp Fiction, he was nominated for the Academy Award for Best Supporting Actor.",
+      "birthday": "1948-12-21",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTQ1NTQwMTYxNl5BMl5BanBnXkFtZTYwMjA1MzY1._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.actors",
+    "pk": 4,
+    "fields": {
+      "name": "Tom",
+      "surname": "Hanks",
+      "description": "Thomas Jeffrey Hanks (born July 9, 1956) is an American-Greek actor and filmmaker. Known for both his comedic and dramatic roles, Hanks is one of the most popular and recognizable film stars worldwide, and is regarded as an American cultural icon.[3] Hanks's films have grossed more than $4.9 billion in North America and more than $9.96 billion worldwide,[4] making him the fifth-highest-grossing actor in North America.[5]",
+      "birthday": "1956-06-09",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_UY317_CR2,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.directors",
+    "pk": 1,
+    "fields": {
+      "name": "Quentin",
+      "surname": "Tarantino",
+      "description": "Quentin Jerome Tarantino (/ˌtærənˈtiːnoʊ/; born March 27, 1963)[1] is an American film director, screenwriter, producer, and actor. His films are characterized by nonlinear storylines, aestheticization of violence, extended scenes of dialogue, ensemble casts, references to popular culture and a wide variety of other films, soundtracks primarily containing songs and score pieces from the 1960s to the 1980s, alternate history, and features of neo-noir film.",
+      "birthday": "1963-03-27",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTgyMjI3ODA3Nl5BMl5BanBnXkFtZTcwNzY2MDYxOQ@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.directors",
+    "pk": 2,
+    "fields": {
+      "name": "Robert",
+      "surname": "Zemeckis",
+      "description": "Robert Lee Zemeckis (born May 14, 1952)[1] is an American director, screenwriter and film producer frequently credited as an innovator in visual effects. He first came to public attention in the 1980s as the director of Romancing the Stone (1984) and the science-fiction comedy Back to the Future film trilogy, as well as the live-action/animated comedy Who Framed Roger Rabbit (1988). In the 1990s, he directed Death Becomes Her and then diversified into more dramatic fare, including 1994's Forrest Gump,[2] for which he won an Academy Award for Best Director; the film itself won Best Picture. The films he has directed have ranged across a wide variety of genres, for both adults and families.",
+      "birthday": "1951-05-14",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTgyMTMzMDUyNl5BMl5BanBnXkFtZTcwODA0ODMyMw@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.movies",
+    "pk": 1,
+    "fields": {
+      "title": "Pulp Fiction",
+      "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "date": "1994-09-14",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR1,0,182,268_AL_.jpg",
+      "actors": [
+        1,
+        2,
+        3
+      ],
+      "directors": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "moviesapp.movies",
+    "pk": 2,
+    "fields": {
+      "title": "Forrest Gump",
+      "plot": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "date": "1994-06-06",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR1,0,182,268_AL_.jpg",
+      "actors": [
+        4
+      ],
+      "directors": [
+        2
+      ]
+    }
+  }
+]
