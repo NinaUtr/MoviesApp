@@ -15,8 +15,8 @@
 
 <div class="card shadow mb-4" style="width: 40rem; margin:15px 0px">
     <div class="row">
-        <div class="col-sm-6">
-            <div class="card shadow mb-4" style="width: 38rem; margin: 15px">
+        <div class="col 6">
+            <div class="card shadow mb-6" style="width: 38rem; margin: 15px">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">{{ object }}</h6>
                 </div>
@@ -37,8 +37,16 @@
                     <p>{% ratings object %}</p>
                 </div>
             </div>
-        </div>
 
+            <div class="card shadow mb-4" style="width: 38rem; margin: 15px">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Bio</h6>
+                </div>
+                <div class="card-body">
+                    <p>Bio: {{ object.description}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

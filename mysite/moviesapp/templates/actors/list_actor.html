@@ -2,42 +2,38 @@
 {% load static %}
 {% load ratings %}
 {% block content %}
+
 <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
 <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
-<style>
-    .star-ratings-rating-average, .star-ratings-rating-count, .star-ratings-rating-user, star-ratings-rating-full, star-ratings-rating-empty {display: none;}
+<style>.star-ratings-rating-average, .star-ratings-rating-count, .star-ratings-rating-user {display: none;}</style>
 
-</style>
+<ul>
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">List of actors</h1>
 
+    <hr/>
+    {% for object in object_list %}
 
-<!-- Page Heading -->
-<h1 class="h3 mb-4 text-gray-800">List of actors</h1>
-
-<hr/>
-{% for object in object_list %}
-
-<div class="row">
-    <div class="col-sm-2">
-        <img src={{ object.photo }} style='width: 200px'>
-    </div>
-    <div class="col-sm-7">
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h4 class="m-0 font-weight-bold text-primary">{% ratings object 15 15 True %} {{ object }}</h4>
-
-            </div>
-            <div class="card-body">
-                <p>{{ object.short_description }}...</p>
-                <a href="{% url 'detail_actor' object.pk %}">See more</a>
+    <div class="row">
+        <div class="col-sm-2">
+            <img src={{ object.photo }} style='width: 200px'>
+        </div>
+        <div class="col-sm-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h4 class="m-0 font-weight-bold text-primary">{% ratings object 15 15 True %} <a
+                            href="{% url 'detail_actor' object.pk %}">{{ object }}</a></h4>
+                </div>
+                <div class="card-body">
+                    <p>{{ object.short_description }}...</p>
+                    <a href="{% url 'detail_actor' object.pk %}">See more</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<br>
-{% empty %}
-<h2>No objects yet.</h2>
-{% endfor %}
+    <br>
+    {% empty %}
+    <h2>No objects yet.</h2>
+    {% endfor %}
 </ul>
-
 {% endblock %}
-
