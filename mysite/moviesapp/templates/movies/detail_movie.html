@@ -43,10 +43,18 @@
                     <p>Directors:</p>
                     {% for director in object.directors.all %}
                     <a href="{% url 'detail_director' director.pk %}">{{director}}</a>
+                    {% if forloop.last %}
+                    {% else %}
+                    <span> | </span>
+                    {%endif%}
                     {%endfor%}
                     <p>Actors:</p>
                     {% for actor in object.actors.all %}
                     <a href="{% url 'detail_actor' actor.pk %}">{{actor}}</a>
+                    {% if forloop.last %}
+                    {% else %}
+                    <span> | </span>
+                    {%endif%}
                     {%endfor%}
                 </div>
             </div>

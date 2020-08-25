@@ -1,0 +1,884 @@
+[
+  {
+    "model": "accounts.customuser",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$U6qgNwh6nzdg$ZaOk3GBTf97v7u1rNpNibRUr2N4s1Rb3aJ4SYBrg4h0=",
+      "last_login": "2020-08-21T11:48:23.594Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-08-20T12:10:02.841Z",
+      "email": "nina.utrata@idego.pl",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.customuser",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$BJIzUaNcalND$F5io+x0G27Q8W7M81Q12YbL08X9onjsklPdYAanbgEk=",
+      "last_login": "2020-08-20T12:12:55.026Z",
+      "is_superuser": false,
+      "username": "nina",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-08-20T12:12:49.304Z",
+      "email": "ninamichelleutrata@gmail.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.customuser",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$OOiHjwI5OhyC$1leeMENMFTiM25mjPnmHPEGQesFcy1u4mVrZ/iBY1KA=",
+      "last_login": "2020-08-20T12:23:54.652Z",
+      "is_superuser": false,
+      "username": "jan",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-08-20T12:22:48.324Z",
+      "email": "jan.baryla@idego.pl",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "moviesapp.actors",
+    "pk": 1,
+    "fields": {
+      "name": "John",
+      "surname": "Travolta",
+      "description": "John Joseph Travolta (born February 18, 1954)[1][2] is an American actor, singer, dancer, and pilot. Travolta rose to fame during the 1970s, appearing on the television series Welcome Back, Kotter (1975–1979) and starring in the box office successes Saturday Night Fever (1977) and Grease (1978). His acting career declined through the 1980s, but enjoyed a resurgence in the 1990s with his role in Pulp Fiction (1994), and he has since starred in films such as Get Shorty (1995), Broken Arrow (1996), Face/Off (1997), Swordfish (2001), The Punisher (2004), Bolt (2008), and The Taking of Pelham 123 (2009).",
+      "birthday": "1954-01-18",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTUwNjQ0ODkxN15BMl5BanBnXkFtZTcwMDc5NjQwNw@@._V1_UY317_CR11,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.actors",
+    "pk": 2,
+    "fields": {
+      "name": "Uma",
+      "surname": "Thurman",
+      "description": "Uma Karuna Thurman (born April 29, 1970)[1] is an American actress and model. She has performed in a variety of films, from romantic comedies and dramas to science fiction and action films. Following her appearances on the December 1985 and May 1986 covers of British Vogue, Thurman starred in Dangerous Liaisons (1988). She rose to international prominence with her performance as Mia Wallace in Quentin Tarantino's 1994 film Pulp Fiction,[2] for which she was nominated for the Academy Award, the BAFTA Award, and the Golden Globe Award for Best Supporting Actress. Often hailed as Tarantino's muse,[3] she reunited with the director to play the main role in Kill Bill: Volume 1 and 2 (2003, 2004),[4] which brought her two additional Golden Globe Award nominations.[5]",
+      "birthday": "1970-04-29",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMjMxNzk1MTQyMl5BMl5BanBnXkFtZTgwMDIzMDEyMTE@._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.actors",
+    "pk": 3,
+    "fields": {
+      "name": "Samuel L.",
+      "surname": "Jackson",
+      "description": "Samuel Leroy Jackson (born December 21, 1948) is an American actor and producer. Widely regarded as one of the most popular actors of his generation, the films in which he has appeared have collectively grossed over $27 billion worldwide, making him the highest-grossing actor of all time (when cameo appearances are excluded).[1][2][3] He rose to fame with films such as Goodfellas (1990), Jungle Fever (1991), Patriot Games (1992), Amos & Andrew (1993), True Romance (1993), and Jurassic Park (1993), and has especially been noted for his roles in the Quentin Tarantino films Pulp Fiction (1994), Jackie Brown (1997), Django Unchained (2012), and The Hateful Eight (2015). For his role in Pulp Fiction, he was nominated for the Academy Award for Best Supporting Actor.",
+      "birthday": "1948-12-21",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTQ1NTQwMTYxNl5BMl5BanBnXkFtZTYwMjA1MzY1._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.actors",
+    "pk": 4,
+    "fields": {
+      "name": "Tom",
+      "surname": "Hanks",
+      "description": "Thomas Jeffrey Hanks (born July 9, 1956) is an American-Greek actor and filmmaker. Known for both his comedic and dramatic roles, Hanks is one of the most popular and recognizable film stars worldwide, and is regarded as an American cultural icon.[3] Hanks's films have grossed more than $4.9 billion in North America and more than $9.96 billion worldwide,[4] making him the fifth-highest-grossing actor in North America.[5]",
+      "birthday": "1956-06-09",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_UY317_CR2,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.directors",
+    "pk": 1,
+    "fields": {
+      "name": "Quentin",
+      "surname": "Tarantino",
+      "description": "Quentin Jerome Tarantino (/ˌtærənˈtiːnoʊ/; born March 27, 1963)[1] is an American film director, screenwriter, producer, and actor. His films are characterized by nonlinear storylines, aestheticization of violence, extended scenes of dialogue, ensemble casts, references to popular culture and a wide variety of other films, soundtracks primarily containing songs and score pieces from the 1960s to the 1980s, alternate history, and features of neo-noir film.",
+      "birthday": "1963-03-27",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTgyMjI3ODA3Nl5BMl5BanBnXkFtZTcwNzY2MDYxOQ@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.directors",
+    "pk": 2,
+    "fields": {
+      "name": "Robert",
+      "surname": "Zemeckis",
+      "description": "Robert Lee Zemeckis (born May 14, 1952)[1] is an American director, screenwriter and film producer frequently credited as an innovator in visual effects. He first came to public attention in the 1980s as the director of Romancing the Stone (1984) and the science-fiction comedy Back to the Future film trilogy, as well as the live-action/animated comedy Who Framed Roger Rabbit (1988). In the 1990s, he directed Death Becomes Her and then diversified into more dramatic fare, including 1994's Forrest Gump,[2] for which he won an Academy Award for Best Director; the film itself won Best Picture. The films he has directed have ranged across a wide variety of genres, for both adults and families.",
+      "birthday": "1951-05-14",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMTgyMTMzMDUyNl5BMl5BanBnXkFtZTcwODA0ODMyMw@@._V1_UX214_CR0,0,214,317_AL_.jpg"
+    }
+  },
+  {
+    "model": "moviesapp.movies",
+    "pk": 1,
+    "fields": {
+      "title": "Pulp Fiction",
+      "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "date": "1994-09-14",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR1,0,182,268_AL_.jpg",
+      "actors": [
+        1,
+        2,
+        3
+      ],
+      "directors": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "moviesapp.movies",
+    "pk": 2,
+    "fields": {
+      "title": "Forrest Gump",
+      "plot": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "date": "1994-06-06",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR1,0,182,268_AL_.jpg",
+      "actors": [
+        4
+      ],
+      "directors": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2020-08-20T12:12:20.617Z",
+      "user": 9,
+      "content_type": 1,
+      "object_id": "8",
+      "object_repr": "aaaa",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2020-08-20T12:12:20.629Z",
+      "user": 9,
+      "content_type": 1,
+      "object_id": "6",
+      "object_repr": "aa",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2020-08-20T12:12:20.632Z",
+      "user": 9,
+      "content_type": 1,
+      "object_id": "5",
+      "object_repr": "nina",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2020-08-20T12:12:26.089Z",
+      "user": 9,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 1,
+      "codename": "add_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 1,
+      "codename": "change_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 1,
+      "codename": "delete_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 1,
+      "codename": "view_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add actors",
+      "content_type": 2,
+      "codename": "add_actors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change actors",
+      "content_type": 2,
+      "codename": "change_actors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete actors",
+      "content_type": 2,
+      "codename": "delete_actors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view actors",
+      "content_type": 2,
+      "codename": "view_actors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add directors",
+      "content_type": 3,
+      "codename": "add_directors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change directors",
+      "content_type": 3,
+      "codename": "change_directors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete directors",
+      "content_type": 3,
+      "codename": "delete_directors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view directors",
+      "content_type": 3,
+      "codename": "view_directors"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add movies",
+      "content_type": 4,
+      "codename": "add_movies"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change movies",
+      "content_type": 4,
+      "codename": "change_movies"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete movies",
+      "content_type": 4,
+      "codename": "delete_movies"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view movies",
+      "content_type": 4,
+      "codename": "view_movies"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 5,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 5,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 5,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 5,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 6,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 6,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 6,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 6,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 7,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 7,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 7,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 7,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 8,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 8,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 8,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 8,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 9,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 9,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 9,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 9,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add rating",
+      "content_type": 10,
+      "codename": "add_rating"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change rating",
+      "content_type": 10,
+      "codename": "change_rating"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete rating",
+      "content_type": 10,
+      "codename": "delete_rating"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view rating",
+      "content_type": 10,
+      "codename": "view_rating"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add user rating",
+      "content_type": 11,
+      "codename": "add_userrating"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change user rating",
+      "content_type": 11,
+      "codename": "change_userrating"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete user rating",
+      "content_type": 11,
+      "codename": "delete_userrating"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view user rating",
+      "content_type": 11,
+      "codename": "view_userrating"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "accounts",
+      "model": "customuser"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "moviesapp",
+      "model": "actors"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "moviesapp",
+      "model": "directors"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "moviesapp",
+      "model": "movies"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "star_ratings",
+      "model": "rating"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "star_ratings",
+      "model": "userrating"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "orlf9ae4o1gc1lkgf9mtofug95firkmp",
+    "fields": {
+      "session_data": ".eJxVi0kKwjAUQO-StZT8zHEpeI7wh4QUtYJpV-LdVehCt294qoLb2ss26qPMoo4qq8MvI-RLXb4Cme_bso5pR2M633C-nvbg7-o4-mfRkaMjsdk5CEGiEQhI0Ig0NwcZbKocE1kbjW0irDWw194HppSNU683OvQzUA:1k95Wx:JXTobasIEIQviMZ2WLlXlwznvPHSDJVWgqAjweAqInY",
+      "expire_date": "2020-09-04T11:48:23.602Z"
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 1,
+    "fields": {
+      "count": 1,
+      "total": 4,
+      "average": "4.000",
+      "content_type": 2,
+      "object_id": 1
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 2,
+    "fields": {
+      "count": 1,
+      "total": 4,
+      "average": "4.000",
+      "content_type": 2,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 3,
+    "fields": {
+      "count": 1,
+      "total": 5,
+      "average": "5.000",
+      "content_type": 2,
+      "object_id": 3
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 4,
+    "fields": {
+      "count": 1,
+      "total": 4,
+      "average": "4.000",
+      "content_type": 3,
+      "object_id": 1
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 5,
+    "fields": {
+      "count": 1,
+      "total": 5,
+      "average": "5.000",
+      "content_type": 4,
+      "object_id": 1
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 6,
+    "fields": {
+      "count": 1,
+      "total": 2,
+      "average": "2.000",
+      "content_type": 2,
+      "object_id": 4
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 7,
+    "fields": {
+      "count": 1,
+      "total": 2,
+      "average": "2.000",
+      "content_type": 3,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "star_ratings.rating",
+    "pk": 8,
+    "fields": {
+      "count": 1,
+      "total": 3,
+      "average": "3.000",
+      "content_type": 4,
+      "object_id": 2
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 1,
+    "fields": {
+      "created": "2020-08-21T13:13:09.873Z",
+      "modified": "2020-08-21T13:13:09.873Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 3,
+      "rating": 8
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 2,
+    "fields": {
+      "created": "2020-08-21T13:13:16.390Z",
+      "modified": "2020-08-21T13:13:16.390Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 5,
+      "rating": 5
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 3,
+    "fields": {
+      "created": "2020-08-21T13:13:30.262Z",
+      "modified": "2020-08-21T13:13:30.262Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 4,
+      "rating": 4
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 4,
+    "fields": {
+      "created": "2020-08-21T13:13:40.741Z",
+      "modified": "2020-08-21T13:13:40.741Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 4,
+      "rating": 1
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 5,
+    "fields": {
+      "created": "2020-08-21T13:13:46.378Z",
+      "modified": "2020-08-21T13:13:46.378Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 4,
+      "rating": 2
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 6,
+    "fields": {
+      "created": "2020-08-21T13:13:53.592Z",
+      "modified": "2020-08-21T13:13:53.592Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 5,
+      "rating": 3
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 7,
+    "fields": {
+      "created": "2020-08-21T13:13:59.808Z",
+      "modified": "2020-08-21T13:13:59.808Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 2,
+      "rating": 6
+    }
+  },
+  {
+    "model": "star_ratings.userrating",
+    "pk": 8,
+    "fields": {
+      "created": "2020-08-21T13:14:09.307Z",
+      "modified": "2020-08-21T13:14:09.307Z",
+      "user": 9,
+      "ip": "127.0.0.1",
+      "score": 2,
+      "rating": 7
+    }
+  }
+]

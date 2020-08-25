@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=moviesdb
+      - POSTGRES_USER=nina
+      - POSTGRES_PASSWORD=nina
+
+  web:
+    build: .
+    command: >
+      sh -c "
+      /var/wait-for-it.sh db:5432 &&
+      python manage.py migrate &&
+      python manage.py loaddata fixtures/data.json &&
+      python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
