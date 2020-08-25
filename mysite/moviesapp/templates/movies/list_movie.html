@@ -21,8 +21,8 @@
         <div class="col-sm-7">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h4 class="m-0 font-weight-bold text-primary">{% ratings object 15 15 True %} {{ object }}</h4>
-
+                    <h4 class="m-0 font-weight-bold text-primary">{% ratings object 15 15 True %} <a
+                            href="{% url 'detail_movie' object.pk %}">{{ object }}</a></h4>
                 </div>
                 <div class="card-body">
                     <p>{{ object.short_plot}}...</p>
