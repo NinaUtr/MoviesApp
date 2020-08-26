@@ -20,4 +20,5 @@ urlpatterns = [
     path('', include('moviesapp.urls')),
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),
-    path('ratings/', include('star_ratings.urls', namespace='ratings'))]
+    path('ratings/', include('star_ratings.urls', namespace='ratings')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))]

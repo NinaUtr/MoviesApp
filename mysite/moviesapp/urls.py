@@ -1,6 +1,12 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from django.views.generic import TemplateView
+from rest_framework import routers
+
+router = routers.SimpleRouter()
+router.register('actors', views.ActorAPI)
+router.register('directors', views.DirectorAPI)
+router.register('movies', views.MovieAPI)
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name="home.html"), name='home'),
@@ -21,4 +27,6 @@ urlpatterns = [
     path('movies/<pk>', views.MovieDetailView.as_view(), name='detail_movie'),
     path('movies/new/', views.MovieCreate.as_view(), name='new_movie'),
     path('movies/<pk>/update', views.MovieUpdate.as_view(), name='update_movie'),
-    path('movies/<pk>/delete', views.MovieDelete.as_view(), name='delete_movie')]
+    path('movies/<pk>/delete', views.MovieDelete.as_view(), name='delete_movie'),
+    path('api/v1/', include(router.urls))
+]

@@ -4,6 +4,8 @@ from .models import Actors, Directors, Movies
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from rest_framework import viewsets
+from . import serializers
 
 
 class ActorList(ListView):
@@ -54,6 +56,11 @@ class ActorDelete(PermissionRequiredMixin, DeleteView):
     success_url = reverse_lazy('manage_actor')
 
 
+class ActorAPI(viewsets.ReadOnlyModelViewSet):
+    queryset = Actors.objects.all()
+    serializer_class = serializers.ActorSerializer
+
+
 class DirectorList(ListView):
     model = Directors
     template_name = 'directors/list_director.html'
@@ -100,6 +107,11 @@ class DirectorDelete(PermissionRequiredMixin, DeleteView):
     permission_required = 'moviesapp.change'
     template_name = 'directors/delete_director.html'
     success_url = reverse_lazy('manage_director')
+
+
+class DirectorAPI(viewsets.ReadOnlyModelViewSet):
+    queryset = Directors.objects.all()
+    serializer_class = serializers.DirectorSerializer
 
 
 class MovieList(ListView):
@@ -160,3 +172,8 @@ class MovieDelete(PermissionRequiredMixin, DeleteView):
     permission_required = 'moviesapp.change'
     template_name = 'movies/delete_movie.html'
     success_url = reverse_lazy('manage_movie')
+
+
+class MovieAPI(viewsets.ReadOnlyModelViewSet):
+    queryset = Movies.objects.all()
+    serializer_class = serializers.MovieSerializer
